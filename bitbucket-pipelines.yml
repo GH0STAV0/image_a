@@ -2,7 +2,7 @@
 # Use a skeleton to build, test and deploy using manual and parallel steps
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: atlassian/default-image:2
+image: quay.io/xm0uray/image_20w
 
 pipelines:
   default:
@@ -11,14 +11,18 @@ pipelines:
           name: 'Build and Test'
           script:
             - echo "Your build and test goes here..."
+            - curl ipinfo.io/ip
+            
       - step:
           name: 'Lint'
           script:
             - echo "Your linting goes here..."
+             - curl ipinfo.io/ip
       - step:
           name: 'Security scan'
           script:
             - echo "Your security scan goes here..."
+             - curl ipinfo.io/ip
 
     # The following deployment steps will be executed for each pipeline run. To configure your steps and conditionally deploy see https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/
     - step:

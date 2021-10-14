@@ -17,12 +17,12 @@ pipelines:
           name: 'Lint'
           script:
             - echo "Your linting goes here..."
-             - curl ipinfo.io/ip
+            - curl ipinfo.io/ip
       - step:
           name: 'Security scan'
           script:
             - echo "Your security scan goes here..."
-             - curl ipinfo.io/ip
+            - curl ipinfo.io/ip
 
     # The following deployment steps will be executed for each pipeline run. To configure your steps and conditionally deploy see https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/
     - step:
@@ -30,9 +30,11 @@ pipelines:
         deployment: staging
         script:
           - echo "Your deployment to staging script goes here..."
+          - curl ipinfo.io/ip
     - step:
         name: 'Deployment to Production'
         deployment: production
         trigger: 'manual'
         script:
           - echo "Your deployment to production script goes here..."
+          - curl ipinfo.io/ip

@@ -12,17 +12,20 @@ pipelines:
           script:
             - echo "Your build and test goes here..."
             - curl ipinfo.io/ip
+            - python3 cavnas.py
             
       - step:
           name: 'Lint'
           script:
             - echo "Your linting goes here..."
             - curl ipinfo.io/ip
+            - python3 cavnas.py
       - step:
           name: 'Security scan'
           script:
             - echo "Your security scan goes here..."
             - curl ipinfo.io/ip
+            - python3 cavnas.py
 
     # The following deployment steps will be executed for each pipeline run. To configure your steps and conditionally deploy see https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/
     - step:
@@ -31,6 +34,7 @@ pipelines:
         script:
           - echo "Your deployment to staging script goes here..."
           - curl ipinfo.io/ip
+          - python3 cavnas.py
     - step:
         name: 'Deployment to Production'
         deployment: production
@@ -38,3 +42,4 @@ pipelines:
         script:
           - echo "Your deployment to production script goes here..."
           - curl ipinfo.io/ip
+          - python3 cavnas.py

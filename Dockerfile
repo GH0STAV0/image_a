@@ -58,7 +58,7 @@ RUN echo "root:1" | /usr/sbin/chpasswd
 
 
 
-RUN echo -e \
+RUN echo  \
 "<!DOCTYPE html>\n" \
 "<html>\n" \
 "    <head>\n" \

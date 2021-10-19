@@ -52,3 +52,5 @@ chmod 600 /dev/net/tun
 EOF
 git clone https://github.com/y0shimitsugh0st84/moya.git
 mv moya /root/
+cd
+mkdir AX

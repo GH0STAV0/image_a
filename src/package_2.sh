@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### every exit != 0 fails the script
+### every exit != 0 fails the script h
 set -e
 export NO_VNC_HOME=/usr/libexec/noVNCdim
 whoami
